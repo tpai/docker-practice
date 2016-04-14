@@ -1,0 +1,16 @@
+{
+    "name": "ifaloteam/docker-phalcon",
+    "description": "Docker Phalcon",
+    "require": {
+        "php": ">=5.3.9"
+    },
+    "require-dev": {
+        "phalcon/devtools": "2.0.10"
+    },
+    "authors": [
+        {
+            "name": "MilesChou",
+            "email": "jangconan@gmail.com"
+        }
+    ]
+}
