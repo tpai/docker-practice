@@ -17,10 +17,13 @@ RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh
 ENV NVM_DIR=/root/.nvm
 ENV SHIPPABLE_NODE_VERSION=v4.2.2
 RUN . $HOME/.nvm/nvm.sh && \
-nvm install $SHIPPABLE_NODE_VERSION && \
-nvm alias default $SHIPPABLE_NODE_VERSION && \
-nvm use default && \
-npm i
+    nvm install $SHIPPABLE_NODE_VERSION && \
+    nvm alias default $SHIPPABLE_NODE_VERSION && \
+    nvm use default && \
+    npm i
+
+# Set Default Port
+ENV PORT=80
 
 # Start app
 ENTRYPOINT ["/root/.nvm/versions/node/v4.2.2/bin/node", "/root/index.js"]
